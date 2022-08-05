@@ -7,18 +7,24 @@ const generateFile = (title, description) =>{
      ${description}
  
     ## Table of Content
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [License](#License)
+    - [Contributing](#contributing)
+    - [Test](#test)
+    - [Questions](#questions)
  
-    ### Instalation
+    ## Instalation
  
-    ### Usage
+    ## Usage
  
-    #### License
+    ## License
  
-    ##### Contributing
+    ## Contributing
  
-    ###### Tests
+    ## Tests
  
-    ###### Questions
+    ## Questions
  
     `;
  };

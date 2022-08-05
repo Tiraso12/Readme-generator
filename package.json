@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Tiraso12/Readme-generator/issues"
   },
-  "homepage": "https://github.com/Tiraso12/Readme-generator#readme"
+  "homepage": "https://github.com/Tiraso12/Readme-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }
