@@ -39,13 +39,81 @@ const promptUser = () =>{
       {
          type: 'confirm',
          name: 'tableConfirm',
-         message: 'do you want a table of content?(Optional)'
+         message: 'do you want a table of content in the README file?(Optional)',
+         default: true
       },
       {
          type: 'input',
          name: 'installation',
-         message: 'procedures for installation' 
+         message: 'provide some information for installation',
+         when:({tableConfirm}) => {
+            if (tableConfirm) {
+               return true;
+            }else{
+               return false;
+            }
+         }
       },
+      {
+         type: 'input',
+         name: 'usage',
+         message: 'Provide instructions and examples for use',
+         when:({tableConfirm}) => {
+            if (tableConfirm) {
+               return true;
+            }else{
+               return false;
+            }
+         }
+      },
+      {
+         type: 'input',
+         name: 'license',
+         message: 'License Information',
+         when:({tableConfirm}) => {
+            if (tableConfirm) {
+               return true;
+            }else{
+               return false;
+            }
+         }
+      },
+      {
+         type: 'input',
+         name: 'contributing',
+         message: 'developers to contribute in the project',
+         when:({tableConfirm}) => {
+            if (tableConfirm) {
+               return true;
+            }else{
+               return false;
+            }
+         }
+      },
+      {
+         type: 'input',
+         name: 'test',
+         message: 'provide some test for your application',
+         when:({tableConfirm}) => {
+            if (tableConfirm) {
+               return true;
+            }else{
+               return false;
+            }
+         }
+      },
+      {
+         type: 'input',
+         name: 'usage',
+         message: 'provide instructions and examples for use',
+         when:({tableConfirm}) => {
+            if (tableConfirm) {
+               return true;
+            }else{
+               return false;
+            }
+         }
+      }
    ]);
 };
 
