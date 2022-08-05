@@ -1,9 +1,10 @@
-
-    # README
+const generateFile = (title, description) =>{
+    return `
+    # ${title}
  
     ## Description
     
-     SECOND TEST TRYING THE COMMAND LINE
+     ${description}
  
     ## Table of Content
  
@@ -19,4 +20,7 @@
  
     ###### Questions
  
-    
+    `;
+ };
+
+ module.exports = generateFile;
