@@ -70,6 +70,11 @@ const promptUser = answers => {
          name: 'usage',
          message: 'provide instructions and examples for use',
 
+      },
+      {
+         type: 'input',
+         name: 'questions',
+         message: 'provide contact information'
       }
    ])
 
