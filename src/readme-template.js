@@ -1,30 +1,36 @@
-const generateFile = (title, description) =>{
+const generateFile = (data) =>{
+    console.log(data);
     return `
-    # ${title}
+    # ${data.title}
  
     ## Description
     
-     ${description}
+     ${data.description}
  
     ## Table of Content
     - [Installation](#installation)
     - [Usage](#usage)
     - [License](#License)
     - [Contributing](#contributing)
-    - [Test](#test)
-    - [Questions](#questions)
+    - [Languages](#languages)
  
     ## Instalation
+
+        ```
+        
+        ```
+    ${data.installation}
  
     ## Usage
- 
+    ${data.usage}
     ## License
- 
+    ${data.license}
     ## Contributing
- 
+    ${data.contributing}
     ## Tests
- 
+    ${data.test}
     ## Questions
+    ${data.questions}
  
     `;
  };
