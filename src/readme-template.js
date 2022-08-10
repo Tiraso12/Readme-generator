@@ -1,8 +1,13 @@
 const generateFile = (data) =>{
-    console.log(data);
+    // console.log(data);
     return `
     # ${data.title}
+
+    
+ ${data.badge}
  
+
+
     ## Description
     
      ${data.description}
@@ -12,13 +17,10 @@ const generateFile = (data) =>{
     - [Usage](#usage)
     - [License](#License)
     - [Contributing](#contributing)
-    - [Languages](#languages)
+    - [Test](#test)
+    - [Questions](#questions)
  
     ## Instalation
-
-        ```
-        
-        ```
     ${data.installation}
  
     ## Usage
