@@ -1,5 +1,4 @@
 const generateFile = (data) =>{
-    // console.log(data);
     return `
     # ${data.title}
 
@@ -26,7 +25,7 @@ ${data.badge}
     ## Usage
     ${data.usage}
     ## License
-    ${data.license}
+    ${data.license} Copyright (c) 2022
     ${data.notice}
    
     ## Contributing
@@ -38,7 +37,7 @@ ${data.badge}
     ## Questions
 
     *GitHub : ${data.github}
-    *Link to Github: ${data.link}
+    *[Link to Github](${data.link})
     *Email: ${data.email}
  
     `;

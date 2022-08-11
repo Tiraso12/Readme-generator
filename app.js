@@ -7,7 +7,7 @@ const promptUser = answers => {
       =====================
        NEW README FILE INFO
       =====================`);
-
+//PROMPT THE QUESTIONS FOR THE README
    return inquirer.prompt([
       {
          type: 'input',
@@ -99,7 +99,7 @@ const promptUser = answers => {
    ])
 
       .then((answers) => {
-        
+        //object to hold the data
          let data = {
             title: answers.title,
             description: answers.description,
@@ -114,7 +114,6 @@ const promptUser = answers => {
             email:answers.email,
             notice:""
          };
-         console.log(answers);
          
          if (data.license === 'MOZILLA') {
             data.badge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)';
@@ -131,12 +130,7 @@ const promptUser = answers => {
          }else if(data.license === 'WTFPL'){
             data.badge = '[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)';
             data.notice =' DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE ';
-         }
-
-         console.log(data);
-         
-
-
+         }  
 
          //  generateFile(data)
          fs.writeFile('README.md', generateFile(data), function (err) {
