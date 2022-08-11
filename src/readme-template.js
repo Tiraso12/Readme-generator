@@ -4,7 +4,7 @@ const generateFile = (data) =>{
     # ${data.title}
 
     
- ${data.badge}
+${data.badge}
  
 
 
@@ -27,12 +27,19 @@ const generateFile = (data) =>{
     ${data.usage}
     ## License
     ${data.license}
+    ${data.notice}
+   
     ## Contributing
     ${data.contributing}
+    
     ## Tests
     ${data.test}
+    
     ## Questions
-    ${data.questions}
+
+    *GitHub : ${data.github}
+    *Link to Github: ${data.link}
+    *Email: ${data.email}
  
     `;
  };

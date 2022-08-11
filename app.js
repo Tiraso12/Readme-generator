@@ -51,7 +51,7 @@ const promptUser = answers => {
          type: 'list',
          name: 'license',
          message: 'License Information',
-         choices: ['MOZILLA', 'ISC', 'IBM','ECLIPSE']
+         choices: ['MOZILLA', 'ISC', 'IBM','ECLIPSE','WTFPL']
       },
       {
          type: 'input',
@@ -72,10 +72,30 @@ const promptUser = answers => {
 
       },
       {
-         type: 'input',
+         type: 'confirm',
          name: 'questions',
-         message: 'provide contact information'
+         message: 'would you like to provide contact information',
+         default:true
+      },
+      {
+         type:'input',
+         name:'github',
+         message:'please provide GitHub ID',
+         when: (answers)=> answers.questions === true
+      },
+      {
+         type:'input',
+         name:'link',
+         message:'Please provide the GitHub link',
+         when: (answers)=> answers.questions === true
+      },
+      {
+         type:'input',
+         name:'email',
+         message:'Please an email address',
+         when: (answers)=> answers.questions === true
       }
+      
    ])
 
       .then((answers) => {
@@ -89,17 +109,28 @@ const promptUser = answers => {
             license: answers.license,
             contributing: answers.contributing,
             badge:'',
+            github:answers.github,
+            link:answers.link,
+            email:answers.email,
+            notice:""
          };
          console.log(answers);
          
          if (data.license === 'MOZILLA') {
             data.badge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)';
+            data.notice = "Mozilla Public License 2.0 (MPL-2.0)";
          }else if (data.license === 'ISC') {
             data.badge = '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)';
+            data.notice = 'ISC License (ISC)';
          }else if(data.license === 'IBM'){
             data.badge = '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)';
+            data.notice ='IBM Public License Version 1.0 (IPL-1.0)';
          }else if(data.license === 'ECLIPSE'){
             data.badge = '[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)';
+            data.notice ='Eclipse Public License 1.0 (EPL-1.0)';
+         }else if(data.license === 'WTFPL'){
+            data.badge = '[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)';
+            data.notice =' DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE ';
          }
 
          console.log(data);
