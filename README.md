@@ -25,7 +25,7 @@ To install the application you can git clone the repository or downloand the .zi
 Make sure you have node js installed
 
 walkthrough of the app here! 
-[readme generator.webm](https://user-images.githubusercontent.com/106271483/184276274-2d33d422-9079-4f89-b78b-e6d4fb57bf32.webm)
+[readme generator.webm](https://www.youtube.com/watch?v=gEaYQI1LoeI&t=9s)
 
 
 
