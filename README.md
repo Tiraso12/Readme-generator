@@ -24,6 +24,10 @@ To install the application you can git clone the repository or downloand the .zi
     
 Make sure you have node js installed
 
+walkthroudgh the app here! 
+[readme generator.webm](<iframe width="560" height="315" src="https://www.youtube.com/embed/gEaYQI1LoeI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>)
+
+
 ## License
 
 WTFPL Copyright (c) 2022
