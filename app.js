@@ -12,7 +12,7 @@ const promptUser = answers => {
       {
          type: 'input',
          name: 'title',
-         message: 'What is the Name of the Project?',
+         message: 'What is the Name of the Project?(REQUIRED)',
          validate: nameTitle => {
             if (nameTitle) {
                return true;
@@ -25,7 +25,7 @@ const promptUser = answers => {
       {
          type: 'input',
          name: 'description',
-         message: 'what is the description of the project?',
+         message: 'what is the description of the project?(REQUIRED)',
          validate: nameDescription => {
             if (nameDescription) {
                return true;
@@ -72,28 +72,14 @@ const promptUser = answers => {
 
       },
       {
-         type: 'confirm',
-         name: 'questions',
-         message: 'would you like to provide contact information',
-         default:true
-      },
-      {
          type:'input',
          name:'github',
          message:'please provide GitHub ID',
-         when: (answers)=> answers.questions === true
-      },
-      {
-         type:'input',
-         name:'link',
-         message:'Please provide the GitHub link',
-         when: (answers)=> answers.questions === true
       },
       {
          type:'input',
          name:'email',
-         message:'Please an email address',
-         when: (answers)=> answers.questions === true
+         message:'Please an email address', 
       }
       
    ])
@@ -110,7 +96,6 @@ const promptUser = answers => {
             contributing: answers.contributing,
             badge:'',
             github:answers.github,
-            link:answers.link,
             email:answers.email,
             notice:""
          };
@@ -141,6 +126,7 @@ const promptUser = answers => {
 
 
 promptUser()
+.then()
 
 
 

@@ -19,27 +19,26 @@ ${data.badge}
     - [Test](#test)
     - [Questions](#questions)
  
-    ## Instalation
+    ## Installation
     ${data.installation}
  
     ## Usage
     ${data.usage}
     ## License
     ${data.license} Copyright (c) 2022
-    ${data.notice}
    
     ## Contributing
     ${data.contributing}
     
-    ## Tests
+    ## Test
     ${data.test}
     
     ## Questions
 
-    *GitHub : ${data.github}
-    *[Link to Github](${data.link})
-    *Email: ${data.email}
- 
+    For any questions feel free to contact me at :
+     *[${data.email}](mailto:${data.email}).
+
+    To see all of my projects click the link! [${data.github}](http://github.com/${data.github}).
     `;
  };
 
