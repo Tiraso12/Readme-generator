@@ -164,7 +164,6 @@ promptUser()
 
 
 
-
 // const printReadmeData = readmeDataArg =>{
 //    readmeDataArg.forEach(readmeItem =>console.log(readmeItem));
 // }
